@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Online Quiz App</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div id="quiz">
-    <h1 id="question"></h1>
-    <ul id="choices"></ul>
-    <button id="submit">Submit Answer</button>
-    <button id="next">Next Question</button>
-  </div>
-  <div id="results">
-    <h1>Quiz Results</h1>
-    <p>Your Score: <span id="score"></span>/<span id="total"></span></p>
-    <button id="reset">Reset Quiz</button>
-  </div>
-  <script src="js/script.js"></script>
+    <div class="container">
+        <h1>Code Quiz</h1>
+        <button id="start-btn">Start</button>
+        <button id="view-highscores-btn">View High Scores</button>
+        <div id="quiz-container" class="hidden">
+            <div id="timer">Time Remaining: <span id="time"></span></div>
+            <div id="question-container"></div>
+            <button id="next-btn" class="hidden">Next</button>
+        </div>
+        <div id="game-over" class="hidden">
+            <h2>Game Over</h2>
+            <p>Your final score is: <span id="final-score"></span></p>
+            <p>Enter your initials: <input type="text" id="initials" maxlength="3"></p>
+            <button id="save-score-btn">Save Score</button>
+        </div>
+        <div id="highscores" class="hidden">
+            <h2>High Scores</h2>
+            <ul id="highscores-list"></ul>
+            <button id="clear-highscores-btn">Clear High Scores</button>
+            <button id="back-btn">Go Back</button>
+        </div>
+    </div>
+    <script src="js/quiz.js"></script>
 </body>
 </html>
